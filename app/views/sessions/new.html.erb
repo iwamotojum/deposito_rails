@@ -1,0 +1,20 @@
+<header>
+  <h1>Deposito > Login<h1>
+</header>
+<main>
+  <%= form_with(scope: :session, url: login_path) do |f| %>
+    <div class="form-group">
+      <%= f.label :username %><br/>
+      <%= f.text_field :username, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :password %><br/>
+      <%= f.password_field :password, class: "form-control" %>
+    </div>
+    
+    <div class="form-group">
+      <%= f.submit "Login", class: "btn btn-primary" %>
+    </div>
+  <% end %>
+</main>

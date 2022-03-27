@@ -26,6 +26,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 # A runtime developer console and IRB alternative with powerful introspection capabilities.
 gem 'pry', '~> 0.13.1'
+#  A Scope & Engine based, clean, powerful, customizable and sophisticated paginator for Ruby webapps
+gem 'kaminari'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'

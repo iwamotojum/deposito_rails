@@ -1,0 +1,23 @@
+<header>
+  <h1>Deposito > Materiais<h1>
+</header>
+<main>
+  <table style="width: 50%">
+    <tr>
+      <th style="width: 30%">Nome</th>
+      <th style="width: 60%">Descrição</th>
+      <%# <th style="width: 50%">Descrição</th> %>
+      <th style="width: 10%">Quantidade</th>
+      <%# <th style="width: 10%">Ações</th> %>
+    </tr>
+    <% @materials.map do |material| %>
+      <tr>
+        <td><%= material.name %></td>
+        <td><%= material.description %></td>
+        <td><%= material.quantity %></td>
+      </tr>
+    <% end %>
+  </table>
+  
+  <%= paginate @materials %>
+</main>

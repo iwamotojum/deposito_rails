@@ -20,10 +20,12 @@
         <td><%= material.description %></td>
         <td><%= material.quantity %></td>
         <td>
-          <%= button_to "+", material_add_path(material.id), class: "btn btn-primary", method: :get %>
-          <%= button_to "-", material_remove_path(material.id), class: "btn btn-secondary", method: :get %>
-          <%= button_to "Log", material_log_path(material.id), class: "btn btn-warning", method: :get %>
-          <%= button_to "Remover", material_destroy_path(material.id), class: "btn btn-danger", method: :delete %>
+          <div class="btn-group">
+            <%= button_to "+", material_add_path(material.id), class: "btn btn-primary", method: :get %>
+            <%= button_to "-", material_remove_path(material.id), class: "btn btn-secondary", method: :get %>
+            <%= button_to "Log", material_log_path(material.id), class: "btn btn-warning", method: :get %>
+            <%= button_to "Remover", material_destroy_path(material.id), class: "btn btn-danger", method: :delete %>
+          </div>
         </td>
       </tr>
     <% end %>

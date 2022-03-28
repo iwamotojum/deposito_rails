@@ -1,0 +1,29 @@
+<header>
+  <h1>Depósito > Materiais > Logs Entrada/Saída > <%= @material.name %><h1>
+</header>
+<main>
+  <table style="width: 50%">
+    <tr>
+      <th>Usuário</th>
+      <th>Entrada/Saída</th>
+      <th>Quantidade</th>
+      <th>Data/Hora</th>
+    </tr>
+    <% if @logs.empty? %>
+      <tr>
+        <td colspan="4">
+          Nenhum registro.
+        </td>
+      </tr>
+    <% else %>
+      <% @logs.map do |log| %>
+        <tr>
+          <td><%= log.user.username %></td>
+          <td><%= log.method %></td>
+          <td><%= log.quantity %></td>
+          <td><%= log.created_at %></td>
+        </tr>
+      <% end%>
+    <% end %>
+  </table>
+</main>

@@ -12,24 +12,41 @@
   - [x] quantity
   - [x] timestamp
   
-- [ ] CRUD de materiais:
+- [x] CRUD de materiais:
   - [x] criar,
   - [x] listar,
-  - [ ] apagar,
   - [x] editar (nome do material)
+  - [x] apagar
+    - [x] adicionar botão na listagem
   
 - [x] Lista de materiais deve ter paginação a cada 10 itens
 
-- [ ] Filtro na lista de material pelo nome
+- [x] Filtro na lista de material pelo nome
 
-- [ ] Dar entrada no material (material e quantidade)
+- [x] Dar entrada no material (material e quantidade)
 
-- [ ] Retirar material (material e quantidade)
+- [x] Retirar material (material e quantidade)
 
-- [ ] Ao adicionar ou retirar material deve ser salvo um log de alterações informando qual o usuário responsável, material e quantidade retirada/adicionada
+- [x] Ao adicionar ou retirar material deve ser salvo um log de alterações informando qual o usuário responsável, material e quantidade retirada/adicionada
 
-- [ ] Tela de lista dos materiais (nome, quantidade (mesmo que 0), link para um log de entrada/retirada com as informações do log)
+- [x] link para um log de entrada/retirada com as informações do log)
 
 - [ ] Adicionar estilização
+
 - [ ] Adicionar flash
+  - [ ] Alerta para:
+    - [ ] Registrar material
+    - [ ] Entrada de material
+    - [ ] Retirada de material
+    - [ ] Edição de material
+    - [ ] Deletar um material
+    - [ ] Login
+    
+- [ ] Erros:
+  - [ ] Entrada de materiais
+  - [ ] Login
+  - [ ] Registro 
+
+- [ ] Ajustar UTC
+
 

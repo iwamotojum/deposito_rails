@@ -16,7 +16,6 @@ class MaterialsController < ApplicationController
     @material = Material.new(material_params)
 
     if @material.save
-      create_log('creation', @material)
       flash[:notice] = "Material created."
       redirect_to materials_path
     else

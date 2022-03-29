@@ -30,6 +30,12 @@ gem 'kaminari'
 # Object-based searching.
 gem 'ransack'
 
+gem 'bootstrap'
+gem 'jquery-rails'
+gem 'simple_form'
+gem 'popper_js'
+gem 'tether-rails'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 

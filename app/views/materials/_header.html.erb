@@ -1,0 +1,11 @@
+<header>
+  <div class="header-row" style="width: 100%;">
+    <h1><%= link_to "Depósito", materials_path, class: "index_header_link" %></h1>
+    <% if logged_in? %>
+      <div class="logout-section">
+        <p class="username-section">Usuário logado: <%= current_user.username %></p>
+        <%= button_to "Sair", logout_path, class: "btn btn-secondary logout-button", method: :delete %>
+      </div>
+    <% end %>
+  </div>
+</header>

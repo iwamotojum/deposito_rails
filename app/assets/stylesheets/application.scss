@@ -1,0 +1,88 @@
+$primary: #E8E8E8;
+$secondary: #D36135;
+
+.root {
+  // margin: 15vh 30vh 0px 30vh;
+  font-family: 'Roboto', sans-serif;
+  background-color: #FFFFFF;
+  color: #0e1111;
+}
+
+.card-login {
+  background-color: $primary !important;
+  border-color: transparent !important;
+}
+
+header {
+  background-color: $primary;
+  padding: 3vh 3vh;
+}
+
+.index_header_link {
+  color: #0e1111;
+  text-decoration: none;
+}
+.index_header_link:hover {
+  color: $secondary;
+}
+
+.logout-section {
+  display: flex;
+  align-items: center;
+}
+
+.username-section {
+  margin-top: 16px; 
+}
+
+.logout-button {
+  color: white !important;
+  margin-left: 3vh;  
+}
+
+.header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.login-title {
+  margin-top: 10vh;
+  margin-bottom: 7vh;
+  text-align: center;
+}
+
+.card-body-edit {
+  text-align: center;
+}
+
+.button-card {
+  width: 100%;
+  color: white !important;
+  font-weight: 700 !important;
+}
+
+.card-materials-index {
+  padding: 0 !important;
+  margin-top: 5vh;
+}
+
+.card-materials-index-header-search {
+  float: right;
+}
+
+.search-label-materials-index {
+  margin-right: 1vh;
+}
+
+.table-materials-index {
+  margin: 0 !important;
+}
+
+.form-card-body {
+  margin: 0 24px;
+}
+
+@import "/*";
+@import "bootstrap";
+@import "tether";

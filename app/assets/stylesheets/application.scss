@@ -1,5 +1,9 @@
 $primary: #E8E8E8;
 $secondary: #D36135;
+$pagination-color: #0e1111;
+$pagination-border-color: $primary;
+$pagination-hover-bg: $secondary;
+$pagination-active-bg: $secondary;
 
 .root {
   // margin: 15vh 30vh 0px 30vh;
@@ -81,6 +85,11 @@ header {
 
 .form-card-body {
   margin: 0 24px;
+}
+
+.index-paginate {
+  display: flex;
+  justify-content: center;
 }
 
 @import "/*";

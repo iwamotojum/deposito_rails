@@ -1,35 +1,49 @@
-<header>
-  <h1>Depósito > Materiais<h1>
-</header>
+<%= render 'header' %>
+
 <main>
-  <%= search_form_for @q do |f| %>
-    <%= f.label :name_cont %>
-    <%= f.search_field :name_cont %>
-    <%= f.submit %>
-  <% end %>
-  <table style="width: 100%; margin-top: 20px;">
-    <tr>
-      <th style="width: 30%">Nome</th>
-      <th style="width: 45%">Descrição</th>
-      <th style="width: 10%">Quantidade</th>
-      <th style="width: 15%">Ações</th>
-    </tr>
-    <% @materials.map do |material| %>
-      <tr>
-        <td><%= material.name %></td>
-        <td><%= material.description %></td>
-        <td><%= material.quantity %></td>
-        <td>
-          <div class="btn-group">
-            <%= button_to "+", material_add_path(material.id), class: "btn btn-primary", method: :get %>
-            <%= button_to "-", material_remove_path(material.id), class: "btn btn-secondary", method: :get %>
-            <%= button_to "Log", material_log_path(material.id), class: "btn btn-warning", method: :get %>
-            <%= button_to "Remover", material_destroy_path(material.id), class: "btn btn-danger", method: :delete %>
+  <div class="card card-materials-index container">
+    <div class="card-header">
+      <div class="container">
+        <div class="row d-flex align-items-center">
+          <div class="col-6 mt-2">
+            <h2>Materiais</h2>
           </div>
-        </td>
+          <div class="col-6">
+            <%= search_form_for @q do |f| %>
+              <%= f.label 'Pesquisa por nome', class: "search-label-materials-index" %>
+              <%= f.search_field :name_cont %>
+              <%= f.submit 'Procurar' %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <table class="table table-materials-index">
+      <tr>
+        <th style="width: 30%; padding-left: 28px;">Nome</th>
+        <th style="width: 45%">Descrição</th>
+        <th style="width: 10%">Quantidade</th>
+        <th style="width: 15%; padding-right: 28px">Ações</th>
       </tr>
-    <% end %>
-  </table>
+      <% @materials.map do |material| %>
+        <tr>
+          <td style="padding-left: 28px"><%= material.name %></td>
+          <td><%= material.description %></td>
+          <td><%= material.quantity %></td>
+          <td>
+            <div class="btn-group" style="padding-right: 28px">
+              <%= button_to "+", material_add_path(material.id), class: "btn btn-primary", method: :get %>
+              <%= button_to "-", material_remove_path(material.id), class: "btn btn-secondary", method: :get %>
+              <%= button_to "Log", material_log_path(material.id), class: "btn btn-warning", method: :get %>
+              <%= button_to "Remover", material_destroy_path(material.id), class: "btn btn-danger", method: :delete %>
+            </div>
+          </td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
   
-  <%= paginate @materials %>
+  <div class="index-paginate mt-4">
+    <%= paginate @materials %>
+  </div>
 </main>

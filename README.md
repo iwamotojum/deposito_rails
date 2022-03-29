@@ -29,9 +29,11 @@
 
 - [x] Ao adicionar ou retirar material deve ser salvo um log de alterações informando qual o usuário responsável, material e quantidade retirada/adicionada
 
-- [x] link para um log de entrada/retirada com as informações do log)
+- [x] link para um log de entrada/retirada com as informações do log
 
-- [ ] Adicionar estilização
+- [x] Adicionar estilização
+    
+- [x] Ajustar UTC
 
 - [ ] Adicionar flash
   - [ ] Alerta para:
@@ -41,12 +43,5 @@
     - [ ] Edição de material
     - [ ] Deletar um material
     - [ ] Login
-    
-- [ ] Erros:
-  - [ ] Entrada de materiais
-  - [ ] Login
-  - [ ] Registro 
-
-- [ ] Ajustar UTC
 
 

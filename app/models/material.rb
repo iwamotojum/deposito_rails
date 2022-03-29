@@ -16,7 +16,6 @@ class Material < ApplicationRecord
     end
 
     self.update!(quantity: self.quantity += @quantity)
-    binding.pry
     self.material_logs.create(material_log_params(method, quantity, current_user))
   end
 

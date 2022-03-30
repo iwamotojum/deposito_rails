@@ -35,6 +35,14 @@
     
 - [x] Ajustar UTC
 
+- [x] Adicionar estilização na página de material/new
+
+- [x] Adicionar estilização na página de material/edit
+
+- [x] Adicionar botão de adicionar material
+
+- [x] Adicionar botão de editar material
+
 - [ ] Adicionar flash
   - [ ] Alerta para:
     - [ ] Registrar material

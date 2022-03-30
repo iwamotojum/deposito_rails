@@ -71,12 +71,21 @@ header {
   margin-top: 5vh;
 }
 
-.card-materials-index-header-search {
-  float: right;
+.material-index-table-title {
+  margin-right: 2vh;
 }
 
-.search-label-materials-index {
-  margin-right: 1vh;
+.search-field-materials-index {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+
+.search-button-materials-index {
+  color: white !important;
+  display: flex;
+  justify-content: end;
 }
 
 .table-materials-index {

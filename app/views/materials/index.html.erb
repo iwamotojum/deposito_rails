@@ -36,20 +36,26 @@
         <th style="width: 10%">Quantidade</th>
         <th class="text-center" style="width: 50%; padding-right: 28px;">Ações</th>
       </tr>
-      <% @materials.map do |material| %>
+      <% if !@materials.empty? %>
+        <% @materials.map do |material| %>
+          <tr>
+            <td style="padding-left: 28px"><%= material.name %></td>
+            <td><%= material.description %></td>
+            <td><%= material.quantity %></td>
+            <td class="text-center">
+              <div class="btn-group flex-wrap" style="padding-right: 28px;">
+                <%= button_to "+", material_add_path(material.id), class: "btn btn-secondary search-button-materials-index", method: :get %>
+                <%= button_to "-", material_remove_path(material.id), class: "btn btn-primary", method: :get %>
+                <%= button_to "Log", material_log_path(material.id), class: "btn btn-warning", method: :get %>
+                <%= button_to "Remover", material_destroy_path(material.id), class: "btn btn-danger", method: :delete %>
+                <%= button_to "Editar", edit_material_path(material.id), class: "btn btn-secondary search-button-materials-index", method: :get %>
+              </div>
+            </td>
+          </tr>
+        <% end %>
+      <% else %>
         <tr>
-          <td style="padding-left: 28px"><%= material.name %></td>
-          <td><%= material.description %></td>
-          <td><%= material.quantity %></td>
-          <td class="text-center">
-            <div class="btn-group flex-wrap" style="padding-right: 28px;">
-              <%= button_to "+", material_add_path(material.id), class: "btn btn-secondary search-button-materials-index", method: :get %>
-              <%= button_to "-", material_remove_path(material.id), class: "btn btn-primary", method: :get %>
-              <%= button_to "Log", material_log_path(material.id), class: "btn btn-warning", method: :get %>
-              <%= button_to "Remover", material_destroy_path(material.id), class: "btn btn-danger", method: :delete %>
-              <%= button_to "Editar", edit_material_path(material.id), class: "btn btn-secondary search-button-materials-index", method: :get %>
-            </div>
-          </td>
+          <td style="padding-left: 28px">Nenhum material encontrado.</td>
         </tr>
       <% end %>
     </table>

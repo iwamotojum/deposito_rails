@@ -43,13 +43,13 @@
 
 - [x] Adicionar botão de editar material
 
-- [ ] Adicionar flash
-  - [ ] Alerta para:
-    - [ ] Registrar material
-    - [ ] Entrada de material
-    - [ ] Retirada de material
-    - [ ] Edição de material
-    - [ ] Deletar um material
-    - [ ] Login
+- [x] Adicionar flash
+  - [x] Alerta para:
+    - [x] Registrar material
+    - [x] Entrada de material
+    - [x] Retirada de material
+    - [x] Edição de material
+    - [x] Deletar um material
+    - [x] Login
 
 

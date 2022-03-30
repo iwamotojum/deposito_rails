@@ -16,10 +16,11 @@ class MaterialsController < ApplicationController
     @material = Material.new(material_params)
 
     if @material.save
-      flash[:notice] = "Material created."
+      flash[:success] = "Material created."
       redirect_to materials_path
     else
-      render :new
+      flash[:danger] = "#{error_messages(@material.errors.full_messages)}"
+      redirect_back(fallback_location: root_path)
     end
   end
 
@@ -29,21 +30,22 @@ class MaterialsController < ApplicationController
 
   def update
     if material.update(material_update_params)
-      flash[:notice] = "Material edited."
+      flash[:success] = "Material edited."
       redirect_to materials_path
     else
-      render :edit
+      flash[:danger] = "#{error_messages(@material.errors.full_messages)}"
+      redirect_back(fallback_location: root_path)
     end
   end
 
   def destroy
-    if !material.material_logs.empty?
-      flash[:alert] = "Material has input/output log, so can't be deleted." 
-      render :index
-    else
+    if material.material_logs.empty?
       material.destroy!
-      flash[:notice] = "Material deleted succesfully."
+      flash[:success] = "Material deleted succesfully."
       redirect_to materials_path
+    else
+      flash[:danger] = "Material has input/output log, so can't be deleted." 
+      redirect_back(fallback_location: root_path)
     end
   end
   
@@ -53,10 +55,11 @@ class MaterialsController < ApplicationController
   
   def input
     if material.update_quantity!("input", material_change_quantity_params[:quantity], current_user)
-      flash[:notice] = "Material inputed."
+      flash[:success] = "Material inputed."
       redirect_to materials_path
     else
-      render :add
+      flash[:danger] = "#{error_messages(@material.errors.full_messages)}"
+      redirect_back(fallback_location: root_path)
     end
   end
   
@@ -66,10 +69,11 @@ class MaterialsController < ApplicationController
   
   def output
     if material.update_quantity!("output", material_change_quantity_params[:quantity], current_user)
-      flash[:notice] = "Material outputed."
+      flash[:success] = "Material outputed."
       redirect_to materials_path
     else
-      render :remove
+      flash[:danger] = "#{error_messages(@material.errors.full_messages)}"
+      redirect_back(fallback_location: root_path)
     end
   end
 
